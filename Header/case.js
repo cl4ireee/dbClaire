@@ -581,6 +581,54 @@ ${downloadMenu}
     }
     break
 }
+case 'searchmenu': {
+    Raol404.sendMessage(m.chat, { react: { text: `${randomemoji}`, key: m.key }})
+    addCountCmd('#downloadmenu', m.sender, _cmd)
+
+    const botInfo = {
+        status: Raol404.public ? "Public Mode" : "Self Mode",
+        version: "3.0.5",
+        uptime: runtime(process.uptime())
+    };
+
+    // Ringkasan Download Menu
+    const downloadMenu = `
+*\`DOWNLOAD MENU\`*
+▢ ${prefix}tiktok
+▢ ${prefix}youtube
+▢ ${prefix}facebook
+▢ ${prefix}instagram
+▢ ${prefix}twitter
+▢ ${prefix}soundcloud
+▢ ${prefix}spotify
+▢ ${prefix}dailymotion
+`.trim()
+
+    try {
+        // Kirim pesan menu download
+        await Raol404.sendMessage(m.chat, {
+            image: { url: 'https://github.com/latesturl/dbRaolProjects/raw/refs/heads/main/media/menu.jpg' },
+            caption: `
+Halo *${pushname}*, berikut adalah daftar perintah untuk menu download:
+
+▢ *Runtime* : ${botInfo.uptime}
+▢ *Mode* : ${botInfo.status}
+▢ *Version* : ${botInfo.version}
+
+${downloadMenu}
+
+📌 *Note*: 
+- Cooldown berlaku untuk beberapa fitur`.trim(),
+            footer: `LatestURL | RaolProjects`
+        }, { quoted: m })
+    } catch (error) {
+        console.error('Download Menu Error:', error)
+        Raol404.sendMessage(m.chat, { 
+            text: `❌ Gagal menampilkan download menu. Error: ${error.message}`
+        })
+    }
+    break
+}		
  case 'tiktokdownload': {
     const videoUrl = encodeURIComponent(text);
     const tempDir = path.join(process.cwd(), 'temporary/');
