@@ -478,28 +478,27 @@ case 'allmenu': {
 ▢ ${prefix}brat
 ▢ ${prefix}bratvid
 
-┏━━°⌜ *OWNER MENU* ⌟°━━┓
-┃  ⭒ ${prefix}addgroup
-┃  ⭒ ${prefix}removegroup
-┃  ⭒ ${prefix}public
-┃  ⭒ ${prefix}self
-┃  ⭒ ${prefix}restart
-┃  ⭒ ${prefix}update
-┃  ⭒ ${prefix}addfile
-┃  ⭒ ${prefix}trash
-┃  ⭒ ${prefix}addcase
-┃  ⭒ ${prefix}addconst
-┃  ⭒ ${prefix}get
-┃  ⭒ ${prefix}getfunc
-┃  ⭒ ${prefix}upchv1
-┃  ⭒ ${prefix}upchv2
-┃  ⭒ ${prefix}swgc
-┗━━━━━━━━━━━━━━━━━━
+*\`OWNER MENU\`*
+▢ ${prefix}addgroup
+▢ ${prefix}removegroup
+▢ ${prefix}public
+▢ ${prefix}self
+▢ ${prefix}restart
+▢ ${prefix}update
+▢ ${prefix}addfile
+▢ ${prefix}trash
+▢ ${prefix}addcase
+▢ ${prefix}addconst
+▢ ${prefix}get
+▢ ${prefix}getfunc
+▢ ${prefix}upchv1
+▢ ${prefix}upchv2
+▢ ${prefix}swgc
 
-┏━━°⌜ *UTILITY MENU* ⌟°━┓
-┃  ⭒ ${prefix}command1
-┃  ⭒ ${prefix}command2
-┗━━━━━━━━━━━━━━━━━━`.trim()
+*\`UTILITY MENU\`*
+▢ ${prefix}command1
+▢ ${prefix}command2
+`.trim()
 
     try {
         // Kirim gambar menu
